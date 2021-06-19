@@ -1,0 +1,209 @@
+.advantages {
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
+    &__inner{
+        //
+    }
+
+    &__title{
+        font-size: 44px;
+        line-height: 53px;
+        margin-bottom: 53px;
+        @extend %sf-regular;
+        @include breakpoint($tablet1-bp){
+            margin-bottom: 32px; // 20 + 12 от рамки, но в принципе везде и так всё схлопывается неплохо, pixel-perfect не нужен
+            font-size: 38px;
+            line-height: 42px;
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 25px;
+        margin-bottom: 20px; //добавил в последнюю очередь, всё вроде норм теперь со стрелкой
+        @include breakpoint($mobile2-bp){
+            margin-bottom: 0;
+        }
+        @include breakpoint($mobile3-bp){
+            padding-left: 0;
+        }
+    }
+
+    &__item{
+        width: 48%;
+        position: relative;
+        display: flex;
+        @include breakpoint($mobile1-bp){
+            flex-wrap: wrap;
+        }
+        @include breakpoint($tablet2-bp){
+            width: 100%;
+        }
+
+        &:nth-child(1){
+            margin-bottom: 115px;
+            @include breakpoint($tablet1-bp){
+                margin-bottom: 50px;
+            }
+            @include breakpoint($tablet2-bp){
+                margin-bottom: 30px;
+            }
+        }
+        &:nth-child(2){
+            margin-bottom: 115px;
+            margin-top: 15px;
+            @include breakpoint($tablet1-bp){
+                margin-bottom: 50px;
+                margin-top: 0;
+            }
+            @include breakpoint($tablet2-bp){
+                margin-bottom: 30px;
+            }
+        }
+        &:nth-child(3){
+            margin-left: 15px;
+            @include breakpoint($tablet1-bp){
+                margin-left: 0;
+            }
+            @include breakpoint($tablet2-bp){
+                margin-bottom: 30px;
+            }
+        }
+        &:nth-child(4){
+            margin-left: 15px;
+            margin-top: 15px;
+            @include breakpoint($tablet1-bp){
+                margin-top: 0;
+                margin-left: 0;
+            }
+            @include breakpoint($tablet2-bp){
+                margin-bottom: 30px;
+            }
+            @include breakpoint($mobile2-bp){
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__num{
+        position: absolute;
+        bottom: 0;
+        left: -32px;
+        font-size: 36px;
+        line-height: 41px;
+        margin-right: 10px;
+        @extend %ubuntu-bold;
+        @include breakpoint($tablet1-bp){
+            display: none;
+        }
+    }
+
+    &__img-wrapper{
+        position: relative;
+        margin-right: 32px;
+        @include breakpoint($mobile1-bp){
+            margin-bottom: 20px;
+            order: 2;
+            margin-left: auto;
+        }
+
+        &::after {
+            content: "";
+            width: 194px;
+            height: 129px;
+            border: 2px solid #fff;
+            position: absolute;
+            top: -12px;
+            left: 12px;
+            @include breakpoint($tablet1-bp){
+                width: 150px;
+                height: 100px;
+            }
+            @include breakpoint($mobile1-bp){
+                width: 194px;
+                height: 129px;
+            }
+        }
+    }
+
+    &__img{
+        position: relative;
+        max-width: 195px;
+        max-height: 130px;
+        z-index: 1;
+        @include breakpoint($tablet1-bp){
+            max-width: 150px;
+        }
+        @include breakpoint($mobile1-bp){
+            max-width: 195px;
+        }
+    }
+
+    &__info{
+        @include breakpoint($mobile1-bp){
+            width: 100%;
+        }
+    }
+
+    &__info-title{
+        max-width: 160px;
+        font-size: 21px;
+        line-height: 24px;
+        @extend %ubuntu-bold;
+        padding-bottom: 10px;
+        @include breakpoint($mobile1-bp){
+            max-width: 100%;
+        }
+        @include breakpoint($mobile5-bp){
+            font-size: 20px;
+
+        }
+    }
+
+    &__info-text{
+        font-size: 15px;
+        line-height: 130%;
+        max-width: 360px; //было 300
+        @include breakpoint($tablet1-bp){
+            line-height: 100%;
+            margin-top: 0;
+        }
+        @include breakpoint($mobile1-bp){
+            margin-bottom: 25px;
+        }
+    }
+
+
+
+    &__line1to2{
+        position: absolute;
+        right: 10px;
+        top: 27px;
+        @include breakpoint($tablet1-bp){
+            display: none;
+        }
+    }
+
+    &__line2to3{
+        position: absolute;
+        bottom: -86px;
+        left: -496px;
+        @include breakpoint($tablet1-bp){
+            display: none;
+        }
+
+    }
+
+    &__line3to4{
+        position: absolute;
+        right: 0px;
+        top: 30px;
+        @include breakpoint($tablet1-bp){
+            display: none;
+        }
+
+    }
+}

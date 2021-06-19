@@ -1,0 +1,109 @@
+.specifications{
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
+    &__inner{
+        //
+    }
+    &__title{
+        font-size: 44px;
+        line-height: 53px;
+        @extend %sf-regular;
+        margin-bottom: 77px;
+        @include breakpoint($tablet1-bp){
+            margin-bottom: 20px;
+            font-size: 38px;
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 25px;
+        @include breakpoint($tablet1-bp){
+            flex-wrap: wrap;
+            margin-bottom: 40px; //изменил с 20, можно либо на $desktop1-bp прописать margin отдельно, либо самому specifications__content'y, чтобы решить проблему c arrow-down
+        }
+        @include breakpoint($mobile2-bp){
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__items-box{
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        flex-direction: column;
+    }
+
+    &__item{
+        max-width: 280px;
+        position: relative;
+        @include breakpoint($tablet1-bp){
+            max-width: 100%;
+        }
+        &+.specifications__item{
+            margin-top: 20px;
+        }
+    }
+
+    &__item-title{
+        font-size: 21px;
+        line-height: 28px;
+        @extend %ubuntu-bold;
+        margin-bottom: 10px;
+    }
+
+    &__item-text{
+        font-size: 15px;
+        line-height: 130%;
+    }
+
+    &__pointer1{
+        position: absolute;
+        top: 16px;
+        right: -81px;
+        @include breakpoint($tablet1-bp){
+            display: none;
+        }
+    }
+
+    &__pointer2{
+        position: absolute;
+        top: -66px;
+        right: -274px;
+        @include breakpoint($tablet1-bp){
+            display: none;
+        }
+    }
+
+    &__pointer3{
+        position: absolute;
+        top: 14px;
+        left: -223px;
+        @include breakpoint($tablet1-bp){
+            display: none;
+        }
+    }
+
+    &__pointer4{
+        position: absolute;
+        top: -13px;
+        left: -99px;
+        @include breakpoint($tablet1-bp){
+            display: none;
+        }
+    }
+
+    &__img{
+        max-width: 660px;
+        max-height: 221px;
+        @include breakpoint($tablet1-bp){
+            order: 3;
+            width: 80%;
+            margin: 20px auto 0;
+        }
+    }
+}

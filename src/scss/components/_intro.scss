@@ -1,0 +1,80 @@
+.intro {
+    &__wrapper{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 150px;
+        @include breakpoint($desktop1-bp){
+            margin-bottom: 35px;
+        }
+        @include breakpoint($mobile2-bp){
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        font-size: 96px;
+        line-height: 115px;
+        @extend %sf-semibold;
+        margin-bottom: 25px;
+        @include breakpoint($desktop1-bp){
+            font-size: 75px;
+            line-height: 90px;
+            margin-bottom: 20px;
+        }
+        @include breakpoint($mobile2-bp){
+            font-size: 50px;
+            line-height: 65px;
+        }
+        @include breakpoint($mobile4-bp){
+            font-size: 30px;
+            line-height: 35px;
+
+        }
+    }
+
+    &__dron-img {
+        @include breakpoint($desktop1-bp){
+            width: 80%;
+        }
+    }
+
+    &__text {
+        max-width: 325px;
+        font-size: 17px;
+        line-height: 150%;
+        margin: 25px 0 35px;
+        @include breakpoint($desktop1-bp){
+            margin: 15px 0 25px;
+        }
+    }
+
+    &__social-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__social-item {
+        &:not(:first-child){
+            margin-left: 50px;
+        }
+    }
+
+    &__social-link {
+        opacity: 0.5;
+        transition: all .3s;
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+    &__social-icon {
+        //
+    }
+}

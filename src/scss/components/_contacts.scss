@@ -1,0 +1,200 @@
+.contacts{
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
+
+    &__title{
+        margin-left: 25px;
+        margin-bottom: 56px;
+        font-size: 44px;
+        line-height: 53px;
+        @extend %sf-regular;
+        @include breakpoint($tablet1-bp){
+            margin-bottom: 20px;
+            font-size: 38px;
+            margin-left: 0;
+        }
+        @include breakpoint($tablet3-bp){
+            margin: 0 auto 35px;
+            text-align: center;
+        }
+    }
+
+    &__content{
+        display: flex;
+        align-items: center;
+        @include breakpoint($tablet2-bp){
+            flex-wrap: wrap;
+        }
+    }
+
+    &__contacts-box{
+        max-width: 310px;
+        margin-left: 50px;
+        @include breakpoint($tablet3-bp){
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        @include breakpoint($mobile1-bp){
+            margin-left: 0;
+        }
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        @include breakpoint($tablet3-bp){
+            display: block;
+
+        }
+        @include breakpoint($mobile1-bp){
+            display: flex;
+        }
+        &+.contacts__item {
+            margin-top: 30px;
+            @include breakpoint($tablet3-bp){
+                margin-top: 10px;
+            }
+        }
+        &:last-child{
+            margin-bottom: 30px;
+        }
+    }
+
+    &__city{
+        font-size: 21px;
+        line-height: 24px;
+        @extend %ubuntu-bold;
+
+    }
+
+    &__telephone{
+        margin: 13px 0 5px;
+        line-height: 130%;
+        text-decoration: none;
+        color: white;
+        @include breakpoint($tablet3-bp){
+            margin-left: 10px;
+        }
+    }
+
+    &__email{
+        line-height: 130%;
+        text-decoration: none;
+        color: white;
+        @include breakpoint($tablet3-bp){
+            margin-left: 10px;
+        }
+    }
+
+    &__form{
+        max-width: 570px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        margin-left: 10px;
+        @include breakpoint($tablet3-bp){
+            margin: 0 auto;
+        }
+
+        &-title{
+            font-size: 21px;
+            line-height: 24px;
+            @extend %ubuntu-bold;
+            margin: 0;
+        }
+
+        &-text{
+            width: 100%;
+            padding: 12px 0;
+            line-height: 130%;
+
+        }
+    }
+
+    &__inputs-box{
+        //
+    }
+
+    &__input{
+        padding: 15px;
+        background: rgba(0,0,0,.5);
+        border: none;
+        opacity: .95;
+        color: #fff;
+        outline: none;
+    }
+
+    &__message{
+        max-width: 570px;
+        min-height: 144px;
+        width: 100%;
+        margin: 10px 0 20px;
+        resize: none;
+        opacity: 0;
+        padding: 15px;
+        background: rgba(0,0,0,.5);
+        border: none;
+        opacity: .95;
+        color: #fff;
+        outline: none;
+    }
+
+    &__btn{
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        border-radius: 2px;
+        @extend %ubuntu-bold;
+        border: 1px solid #fff;
+        padding: 9px 15px;
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover{
+            color: #000;
+            background-color: #fff;
+        }
+        @include breakpoint($tablet3-bp){
+            margin: 0 auto;
+        }
+    }
+
+    &__social{
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s;
+        margin-left: 25px;
+        @include breakpoint($tablet2-bp){
+            width: 100%;
+            flex-direction: row;
+            margin: 25px auto 0;
+            justify-content: center;
+        }
+
+        &-link{
+            transition: all 0.3s;
+            &+.contacts__social-link{
+                margin-top: 25px;
+                @include breakpoint($tablet2-bp){
+                    margin-top: 0;
+                    margin-left: 25px;
+                }
+            }
+            opacity: 0.5;
+            &:hover{
+                opacity: 1;
+
+            }
+
+        }
+
+        &-icon{
+            //
+        }
+    }
+}

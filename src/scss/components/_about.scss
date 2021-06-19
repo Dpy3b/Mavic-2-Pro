@@ -1,0 +1,207 @@
+.about {
+    &__wrapper{
+        display: flex;
+        align-items: center;
+    }
+    &__inner {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 150px; // либо вместо этого для about-slider__box mb80px
+        @include breakpoint($tablet1-bp){
+            flex-wrap: wrap;
+        }
+        @include breakpoint($mobile2-bp){
+            margin-bottom: 0;
+        }
+    }
+    &__desc{
+        @include breakpoint($tablet1-bp){
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    &__title {
+        @extend %sf-regular;
+        font-size: 44px;
+        line-height: 53px;
+        margin-bottom: 55px;
+        @include breakpoint($tablet1-bp){
+            margin-bottom: 20px;
+            font-size: 38px;
+            line-height: 42px;
+        }
+        @include breakpoint($mobile2-bp){
+            margin-bottom: 0;
+            font-size: 30px;
+            line-height: 34px;
+            margin-top: 20px;
+        }
+        @include breakpoint($mobile4-bp){
+            font-size: 26px;
+            line-height: 30px;
+        }
+    }
+
+    &__text-box{
+    }
+
+    &__text {
+        @extend %ubuntu-light;
+        margin-top: 25px;
+        max-width: 440px;
+        font-size: 17px;
+        line-height: 150%;
+        margin: 35px 70px 0 30px;
+        @include breakpoint($tablet1-bp){
+            margin: 15px 0 0 30px;
+            font-size: 15px;
+        }
+        @include breakpoint($mobile2-bp){
+            margin: 15px 0 0 0;
+        }
+    }
+
+    &__slider{
+        z-index: 1;
+    }
+
+    &__slider-box {
+        max-width: 500px;
+        max-height: 300px;
+        position: relative;
+        margin-top: 250px;
+        //margin-bottom: 80px; запасной вариант вместо about__inner
+        @include breakpoint($desktop1-bp){
+            margin-bottom: 100px;
+        }
+        @include breakpoint($tablet1-bp){
+            margin: 0 auto;
+            max-width: 400px;
+        }
+        @include breakpoint($mobile2-bp){
+            max-width: 300px;
+            margin-bottom: 48px;
+
+        }
+        @include breakpoint($mobile4-bp){
+            max-width: 280px;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: -15px;
+            right: -17px;
+            width: 500px;
+            height: 278px;
+            border: 4px solid #fff;
+            @include breakpoint($tablet1-bp){
+                top: -10px;
+                right: -12px;
+                width: 400px;
+                height: 214px;
+                border: 2px solid #fff;
+            }
+            @include breakpoint($mobile2-bp){
+                width: 300px;
+                height: 161px;
+            }
+            @include breakpoint($mobile4-bp){
+                width: 280px;
+                height: 150px;
+                top: -8px;
+                right: -10px;
+                border: 1px solid #fff;
+            }
+        }
+    }
+
+    &__text-slider {
+        @extend %ubuntu-medium;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: right;
+        max-width: 285px;
+        position: absolute;
+        text-align: right;
+        z-index: 5;
+        bottom: -30px;
+        left: -150px;
+        @include breakpoint($tablet1-bp){
+            left: -80px;
+            bottom: -35px;
+        }
+        @include breakpoint($mobile2-bp){
+            max-width: 200px;
+            left: -40px;
+        }
+        @include breakpoint($mobile4-bp){
+            left: -55px;
+        }
+        @include breakpoint($mobile5-bp){
+            display: none;
+        }
+    }
+
+    &__slider-text{
+        font-size: 24px;
+        line-height: 28px;
+        text-align: right;
+        @include breakpoint($tablet1-bp){
+            font-size: 20px;
+            line-height: 20px;
+        }
+        @include breakpoint($mobile2-bp){
+            font-size: 16px;
+            line-height: 20px;
+        }
+        @include breakpoint($mobile4-bp){
+            font-size: 13px;
+            line-height: 16px;
+        }
+    }
+
+    &__slider-img{
+        max-width: 500px;
+        position: relative;
+        z-index: 50;
+        display: block;
+        @include breakpoint($tablet1-bp){
+            max-width: 400px;
+        }
+        @include breakpoint($mobile2-bp){
+            max-width: 300px;
+        }
+        @include breakpoint($mobile4-bp){
+            max-width: 280px;
+        }
+    }
+
+    &__slider-btn{
+        position: absolute;
+        bottom: -47px;
+        right: 0;
+        padding: 12px 26px;
+        border: none;
+        cursor: pointer;
+        svg{
+            stroke: white;
+        }
+        &.slick-arrow{
+            background-color: #000;
+        }
+        &.slick-disabled{
+            background-color: white;
+            svg{
+                stroke: #000;
+            }
+        }
+        &-left{
+            right: 62px;
+        }
+    }
+}

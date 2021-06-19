@@ -1,0 +1,90 @@
+@import "./vendor";
+@import "./global";
+@import "./components/header";
+@import "./components/intro";
+@import "./components/about";
+@import "./components/advantages";
+@import "./components/specifications";
+@import "./components/questions";
+@import "./components/contacts";
+@import "./components/footer";
+
+
+html {
+    box-sizing: border-box;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+*, *::before,*::after {
+    box-sizing: inherit;
+
+}
+
+body {
+    min-width: 320px;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #333;
+    font-size: 17px;
+    @extend %ubuntu-light;
+}
+
+ul{
+    list-style: none;
+}
+
+.container {
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.scroll-arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 5;
+    padding: 13px 0 30px;
+    @include breakpoint($desktop1-bp){
+        padding: 13px 0 40px;
+    }
+    @include breakpoint($mobile2-bp){
+        padding: 13px 0;
+    }
+
+    &__icon {
+        //
+    }
+}
+
+.section {
+    position: relative;
+    background: 50%/cover no-repeat url(../img/bg-image.png);
+    &::before{
+        content: "";
+        background: -o-linear-gradient(330.65deg, rgba(23, 26, 28, .72) 0, #5e5e57 100%);
+        background: linear-gradient(119.35deg, rgba(23, 26, 28, .72), #5e5e57);
+        opacity: .15;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0
+    }
+    &__wrapper{
+        z-index: 1;
+        min-height: 100vh;
+        position: relative;
+        padding: 74px 0 50px;
+        @include breakpoint($mobile2-bp){
+            padding: 74px 0 150px;
+        }
+    }
+}
+
+.intro{
+    background: url(../img/intro-bg.png) top center/cover no-repeat;
+}

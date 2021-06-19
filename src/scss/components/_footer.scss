@@ -1,0 +1,15 @@
+.footer{
+    position: absolute;
+    bottom: 32px;
+    right: 0;
+    margin-right: 15px; // просто так, добавил уже после медиазапроса
+    @include breakpoint($desktop1-bp){
+        margin-right: 7px; //чтобы каcтомный скролл не наезжал
+    }
+
+    &__copy{
+        font-size: 13px;
+        line-height: 130%;
+        opacity: .64;
+    }
+}
