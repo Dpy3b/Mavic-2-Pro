@@ -980,10 +980,11 @@ table {
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  margin-bottom: 150px; }
+  margin-bottom: 20px; }
   @media screen and (max-width: 1100px) {
     .about__inner {
-      flex-wrap: wrap; } }
+      flex-wrap: wrap;
+      margin-bottom: 150px; } }
   @media screen and (max-width: 520px) {
     .about__inner {
       margin-bottom: 0; } }
@@ -1765,5 +1766,14 @@ ul {
 
 .intro {
   background: url(../img/intro-bg.png) top center/cover no-repeat; }
+  .intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23, 26, 28, 0) 50.28%, rgba(23, 26, 28, 0.00225974) 50.29%, rgba(4, 5, 5, 0.820343) 58.72%, rgba(5, 5, 6, 0.792703) 80.08%, #000 87.89%);
+    opacity: 0.4; }
 
 /*# sourceMappingURL=main.css.map */

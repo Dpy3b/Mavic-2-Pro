@@ -22,15 +22,14 @@ $(function(){
 
     $('#fullpage').fullpage({
 		//options here
-		autoScrolling:true,
+		autoScrolling: true,
         scrollHorizontally: true,
         sectionSelector: '.section',
         scrollOverflow: true, //добавили ключевую строчку
         menu: '#header__nav',
         anchors: ['intro', 'about', 'advantages', 'specifications', 'questions', 'contacts'],
-
-
     });
+
     $('.menu__btn').on ('click', function(){
         $('.menu__btn').toggleClass('menu__btn--active');
         $('.menu__list').toggleClass('menu__list--active');

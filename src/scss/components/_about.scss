@@ -10,9 +10,10 @@
         justify-content: space-between;
         align-items: flex-start;
         width: 100%;
-        margin-bottom: 150px; // либо вместо этого для about-slider__box mb80px
+        margin-bottom: 20px; // либо вместо этого для about-slider__box mb80px
         @include breakpoint($tablet1-bp){
             flex-wrap: wrap;
+            margin-bottom: 150px;
         }
         @include breakpoint($mobile2-bp){
             margin-bottom: 0;
